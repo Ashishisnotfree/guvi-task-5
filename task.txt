@@ -13,8 +13,8 @@ function titleCase(str) {
 console.log(titleCase("hello world"));
 //c
 const arr = [1, 2, 3, 4];
-const reducer = (accumulator, curr) => accumulator + curr;
-console.log(arr.reduce(reducer));
+const red = (accu, curr) => accu + curr;
+console.log(arr.reduce(red));
 //d
 function sort_prime(num) {
 
@@ -148,9 +148,28 @@ let K = 2;
 RightRotate(Array, N, K);
 
 //3 
+
 //a) const numbers= [1,2,3,4,5,6,7,8];
 const odd = numbers.filter((num)=> num % 2 ==1 )
 console.log(odd);
+
+//b) const titleCase = str => 
+  str.toLowerCase().split(' ').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+
+console.log(titleCase("hello world"));
+
+//c) var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+numArray = numArray.filter((number) => {
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+});
+
+console.log(numArray);
 
 
 
